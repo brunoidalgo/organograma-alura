@@ -1,11 +1,11 @@
 import Banner from './components/Banner';
-import Texto from './components/Texto';
+import { Formulario } from './components/Formulario';
 
 function App() {
   return (
     <>
       <Banner />
-      <Texto />
+      <Formulario />
     </>
   );
 }
