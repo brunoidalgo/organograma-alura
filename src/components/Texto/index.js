@@ -2,17 +2,14 @@ import "./Texto.css"
 
 const Texto = (props) => {
 
-    let valor = '';
-
     const onDigit = (e) => {
-        valor = e.target.value
-        console.log(valor)
+        props.onModify(e.target.value);
     }
 
     return (
         <div className="campo-texto">
             <label>{props.label}</label>
-            <input onChange={onDigit} required={props.obrigatorio} placeholder={props.placeholder} />
+            <input value={props.value} onChange={onDigit} required={props.obrigatorio} placeholder={props.placeholder} />
         </div>
     )
 }

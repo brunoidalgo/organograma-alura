@@ -3,8 +3,6 @@ import { Formulario } from './components/Form';
 
 function App() {
 
-
-
   return (
     <>
       <Banner />
