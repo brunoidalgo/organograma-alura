@@ -4,7 +4,7 @@ import Dropdown from "../Dropdown"
 import Texto from "../Texto"
 import "./Formulario.css"
 
-export const Formulario = () => {
+export const Formulario = (props) => {
 
     const [name, setName] = useState('');
     const [position, setPosition] = useState('');
@@ -14,19 +14,13 @@ export const Formulario = () => {
     const onSave = (e) => {
         // impede que a página seja recarregada.
         e.preventDefault();
-        console.log("Form foi submetido", name, position, img, team)
+        props.onRegister({
+            name,
+            position,
+            img,
+            team
+        })
     }
-
-    const itens = [
-        "Selecione",
-        "Front End",
-        "Programação",
-        "Mobile",
-        "Inovação e Gestão",
-        "Devops",
-        "Data Science",
-        "UX e Design"
-    ]
 
     return (
         <section className="formulario">
@@ -46,7 +40,7 @@ export const Formulario = () => {
                 />
                 <Dropdown
                     obrigatorio={true} label="Time"
-                    itens={itens}
+                    itens={props.teams}
                     value={team}
                     onModify={value => setTeam(value)}
                 />
