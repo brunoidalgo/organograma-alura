@@ -1,6 +1,6 @@
-import "./Card.css";
+import "./Colaborator.css";
 
-const Card = (props) => {
+const Colaborator = (props) => {
     return (
         <div className="colaborator">
             <div style={{ backgroundColor: props.secondColor }} className="cabecalho">
@@ -8,10 +8,10 @@ const Card = (props) => {
             </div>
             <div className="rodape">
                 <h4>Bruno Empke</h4>
-                <h5>Full Stack Engineer</h5>
+                <h5>Developer</h5>
             </div>
         </div >
     )
 }
 
-export default Card;
+export default Colaborator;

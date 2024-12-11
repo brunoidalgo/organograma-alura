@@ -53,8 +53,18 @@ function App() {
   return (
     <>
       <Banner />
-      <Formulario teams={teams.map(team => team.name)} onRegister={colaborator => onRegister(colaborator)} />
-      {teams.map(team => <Team key={team.name} name={team.name} firstColor={team.firstColor} secondColor={team.secondColor} />)}
+      <Formulario teams={teams.map(team => team.name)}
+        onRegister={colaborator => onRegister(colaborator)} />
+
+      {teams.map(team =>
+        <Team
+          key={team.name}
+          name={team.name}
+          firstColor={team.firstColor}
+          secondColor={team.secondColor}
+          colaborators={colaborators || []}
+        />)}
+
     </>
   );
 }
