@@ -47,7 +47,7 @@ function App() {
 
   const onRegister = (colaborator) => {
     console.log(colaborator);
-    setColaborators(...colaborators, colaborator);
+    setColaborators([...colaborators, colaborator]);
   }
 
   return (
@@ -62,7 +62,7 @@ function App() {
           name={team.name}
           firstColor={team.firstColor}
           secondColor={team.secondColor}
-          colaborators={colaborators || []}
+          colaborators={colaborators}
         />)}
 
     </>

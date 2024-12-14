@@ -23,23 +23,23 @@ export const Formulario = (props) => {
     }
 
     return (
-        <section className="formulario">
+        <section className="form">
             <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
                 <Texto
-                    obrigatorio={true} label="Nome" placeholder="Digite seu nome"
+                    obrigatorio={true} label="Name" placeholder="Digite seu nome"
                     onModify={value => setName(value)}
                 />
                 <Texto
-                    obrigatorio={true} label="Cargo" placeholder="Digite seu cargo"
+                    obrigatorio={true} label="Position" placeholder="Digite seu cargo"
                     onModify={value => setPosition(value)}
                 />
                 <Texto
-                    label="Imagem" placeholder="Informe o endereço da imagem"
+                    label="Img" placeholder="Informe o endereço da imagem"
                     onModify={value => setImg(value)}
                 />
                 <Dropdown
-                    obrigatorio={true} label="Time"
+                    obrigatorio={true} label="Team"
                     itens={props.teams}
                     value={team}
                     onModify={value => setTeam(value)}
