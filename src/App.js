@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import { Formulario } from './components/Form';
 import Team from './components/Team';
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -46,7 +47,6 @@ function App() {
   const [colaborators, setColaborators] = useState([]);
 
   const onRegister = (colaborator) => {
-    console.log(colaborator);
     setColaborators([...colaborators, colaborator]);
   }
 
@@ -62,9 +62,12 @@ function App() {
           name={team.name}
           firstColor={team.firstColor}
           secondColor={team.secondColor}
-          colaborators={colaborators}
+          colaborators={
+            colaborators.filter(colaborator => colaborator.team == team.name)
+          }
         />)}
 
+      <Footer />
     </>
   );
 }

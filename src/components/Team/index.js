@@ -7,19 +7,20 @@ const Team = (props) => {
     const secondColor = { borderColor: props.secondColor };
 
     return (
-        <section className="team" style={fisrtColor}>
+        (props.colaborators.length > 0) ? <section className="team" style={fisrtColor}>
             <h3 style={secondColor}>{props.name}</h3>
             <div className="colaborators">
                 {props.colaborators.map(colaborator => <Colaborator
+                    corDeFundo={props.secondColor}
                     key={colaborator.name}
                     name={colaborator.name}
                     position={colaborator.position}
                     photo={colaborator.img}
                     alt={colaborator.name}
                 />)}
-                {console.log(props.img)}
             </div>
         </section>
+            : ''
     )
 }
 

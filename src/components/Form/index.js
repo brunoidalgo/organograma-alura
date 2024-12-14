@@ -20,6 +20,10 @@ export const Formulario = (props) => {
             img,
             team
         })
+        setName('');
+        setPosition('');
+        setImg('');
+        setTeam('');
     }
 
     return (
@@ -27,15 +31,15 @@ export const Formulario = (props) => {
             <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
                 <Texto
-                    obrigatorio={true} label="Name" placeholder="Digite seu nome"
+                    obrigatorio={true} label="Name" placeholder="Input your full name"
                     onModify={value => setName(value)}
                 />
                 <Texto
-                    obrigatorio={true} label="Position" placeholder="Digite seu cargo"
+                    obrigatorio={true} label="Position" placeholder="Input your position"
                     onModify={value => setPosition(value)}
                 />
                 <Texto
-                    label="Img" placeholder="Informe o endereço da imagem"
+                    label="Img" placeholder="Give the img adress"
                     onModify={value => setImg(value)}
                 />
                 <Dropdown
@@ -44,7 +48,7 @@ export const Formulario = (props) => {
                     value={team}
                     onModify={value => setTeam(value)}
                 />
-                <Button >
+                <Button>
                     Criar card
                 </Button>
             </form>
