@@ -46,7 +46,6 @@ function App() {
   ];
 
   const [colaborators, setColaborators] = useState([]);
-  const [form, setForm] = useState(true);
 
   const onRegister = (colaborator) => {
     // Debugger ferramenta utilizada para debeugar o código no navegador.

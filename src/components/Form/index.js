@@ -1,8 +1,8 @@
-import { useState } from "react"
-import Button from "../Button"
-import Dropdown from "../Dropdown"
-import Texto from "../Texto"
-import "./Formulario.css"
+import { useState } from "react";
+import Button from "../Button";
+import Dropdown from "../Dropdown";
+import Texto from "../Texto";
+import "./Formulario.css";
 
 export const Formulario = (props) => {
 
@@ -31,7 +31,8 @@ export const Formulario = (props) => {
             <form onSubmit={onSave}>
                 <h2>Preencha os dados para criar o card do colaborador.</h2>
                 <Texto
-                    obrigatorio={true} label="Name" placeholder="Input your full name"
+                    obrigatorio={true} label="Name"
+                    placeholder="Input your full name"
                     onModify={value => setName(value)}
                 />
                 <Texto
@@ -49,7 +50,7 @@ export const Formulario = (props) => {
                     onModify={value => setTeam(value)}
                 />
                 <Button>
-                    Criar card
+                    Create card
                 </Button>
             </form>
         </section>
