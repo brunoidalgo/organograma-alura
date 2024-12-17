@@ -1,0 +1,26 @@
+.organization {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    padding: 2em;
+    color: #6278F7;
+}
+
+.organization div h2 {
+    font-size: 2em;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+    font-weight: 400;
+}
+
+.img-button {
+    border: none;
+    background-size: cover;
+    cursor: pointer;
+    background-image: url('../../images/newCard.png');
+    width: 80px;
+    height: 80px;
+    background-color: #FFFFFF;
+}

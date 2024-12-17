@@ -3,6 +3,7 @@ import Banner from './components/Banner';
 import { Formulario } from './components/Form';
 import Team from './components/Team';
 import Footer from "./components/Footer";
+import Organization from './components/Organization';
 
 function App() {
 
@@ -45,8 +46,11 @@ function App() {
   ];
 
   const [colaborators, setColaborators] = useState([]);
+  const [form, setForm] = useState(true);
 
   const onRegister = (colaborator) => {
+    // Debugger ferramenta utilizada para debeugar o código no navegador.
+    // debugger
     setColaborators([...colaborators, colaborator]);
   }
 
@@ -55,6 +59,8 @@ function App() {
       <Banner />
       <Formulario teams={teams.map(team => team.name)}
         onRegister={colaborator => onRegister(colaborator)} />
+
+      <Organization />
 
       {teams.map(team =>
         <Team

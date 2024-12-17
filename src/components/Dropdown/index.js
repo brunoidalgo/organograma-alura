@@ -6,7 +6,7 @@ export default function Dropdown(props) {
             <label>{props.label}</label>
             <select onChange={e => props.onModify(e.target.value)} value=
                 {props.value} required={props.obrigatorio}>
-                <option value=""></option>
+                <option value="">Selecione</option>
                 {props.itens.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
